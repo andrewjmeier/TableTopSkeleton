@@ -1,5 +1,5 @@
 {
-  "name": "your-name-here",
+  "name": "your-game-name-here",
   "version": "1.0.0",
   "description": "A board game using TableTop.JS",
   "main": "index.js",
