@@ -1,4 +1,4 @@
-# This is a skeleton project for creating a new board game with TableTop.JS
+# This is a skeleton project for creating a new board game with [TableTop.JS](http://github.com/andrewjmeier/TableTop.JS)
 
 # Demo - SimpleGame
 
