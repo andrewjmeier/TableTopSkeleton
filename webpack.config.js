@@ -1,8 +1,8 @@
 module.exports = {
-    entry: "./src/boardgame.js",
+    entry: "./src/board_game.js",
     output: {
         path: __dirname,
-        filename: "checker.js"
+        filename: "bundle.js"
     },
     module: {
         loaders: [
