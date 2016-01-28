@@ -6,20 +6,24 @@ var SimpleGame = require("./simple_game.js");
 var SimpleBoard = require("./simple_board.js");
 var SimpleView = require("./simple_view.js");
 
-// create the players
-var playerOne = new TableTop.Player("Alice", 1);
-var playerTwo = new TableTop.Player("Bob", 2);
-var players = [playerOne, playerTwo];
-
 // create the Board, Game, and TurnMap
 var board = new SimpleBoard();
-var game = new SimpleGame(players, board);
-var turnMap = new TableTop.ManualTurn(game);
+var game = new SimpleGame(board);
+
+var view = new SimpleView(game, turnMap);
+
+//create our startView
+var startView = new TableTop.StartView(game); 
+
+// create our next player view
+var nextPlayerView = new TableTop.NextPlayerView(game);
+
+// create our game over view
+var gameOverView = new TableTop.GameOverView(game);
+
+var turnMap = new TableTop.ManualTurn(game, startView, view, gameOverView, nextPlayerView);
 game.setTurnMap(turnMap);
 
-// create our view, and draw it
-var view = new SimpleView(game, turnMap);
-view.drawBoard();
 
 // this initiates the TurnMap ("Gameloop") and 
 // gets the ball rolling!
